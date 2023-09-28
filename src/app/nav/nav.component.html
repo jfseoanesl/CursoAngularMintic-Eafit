@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/genero']" [queryParams]="{ genero: 'estreno'}" >Estreno</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/genero']" [queryParams]="{ genero: 'accion'}"  >Accion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/genero']" [queryParams]="{ genero: 'drama'}" >Drama</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/genero']" [queryParams]="{ genero: 'terror'}" >Terror</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/genero']" [queryParams]="{ genero: 'infantil'}" >Infantil</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/genero']" [queryParams]="{ genero: 'familia'}" >Familia</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/genero']" [queryParams]="{ genero: 'serie'}" >Series</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/genero']" [queryParams]="{ genero: 'anime'}" >Anime</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/registro']" [queryParams]="{ forms: 'registro'}">Registro</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/lista']" [queryParams]="{ forms: 'lista'}" >Listado</a>
+          </li> 
+        </ul>
+      </div>
+      <button (click)="logOut()"> LogOut </button>
+    </div>
+  </nav>

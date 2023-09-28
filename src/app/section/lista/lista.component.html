@@ -1,0 +1,70 @@
+
+<div class="row justify-content-start">
+<form [formGroup]="formulario" (ngSubmit)="filrar()" class="d-flex centrar-div">
+    
+        <div class="col-9">
+            <h3> Lista de peliculas registradas [{{catalogo.length}}] </h3>
+        </div>
+        <div class="col-2">
+            <select class="form-control" formControlName="genero" id="genero">
+                <option value="terror" selected>Terror</option>
+                <option value="accion">Accion</option>
+                <option value="drama">Drama</option>
+                <option value="infantil">Infantil</option>
+                <option value="terror">Terror</option>
+                <option value="familia">Familia</option>
+                <option value="serie">Serie</option>
+                <option value="anime">Anime</option>
+            </select>
+
+        </div>
+        <div class="col">
+            <input type="submit" class="btn btn-outline-success" value="Search">
+        </div>
+   
+
+</form> 
+</div>
+<table class="table table-striped table-hover centrar-div">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">img</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Sinopsis</th>
+            <th scope="col">Año</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let pelicula of catalogo; index as i">
+            <th scope="row"><a [routerLink]="['/genero']">{{i+1}}</a></th>
+            <td><img src="{{pelicula.img}}" width="70" height="100"></td>
+            <td>{{pelicula.titulo}}</td>
+            <td class="something">{{pelicula.sinopsis}}</td>
+            <td>{{pelicula.anio}}</td>
+            <td><button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="onClickSelect(pelicula)">
+                Borrar
+              </button>
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Confirmacion</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      ¿Esta seguro de que desea eliminar el registro {{pelicula.titulo}}?
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="onClickDeleteConfirm()">Confirmar</button>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+        </tr>
+</tbody>
+</table>

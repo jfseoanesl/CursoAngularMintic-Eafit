@@ -1,0 +1,58 @@
+<div class="centrar-h3">
+
+    <h1> Formulario Registro</h1>
+    <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
+
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Titulo</label>
+            <input type="text" class="form-control" formControlName="titulo" placeholder="nombre">
+        </div>
+        <div class="mb-3">
+            <label for="sinopsis" class="form-label">Sinopsis</label>
+            <input type="text" class="form-control" formControlName="sinopsis" placeholder="sinopsis">
+        </div>
+        <div class="mb-3">
+            <label for="genero" class="form-label">Genero</label>
+            <select class="form-control" formControlName="genero">
+                <option value="terror" selected>Terror</option>
+                <option value="accion">Accion</option>
+                <option value="drama">Drama</option>
+                <option value="infantil">Infantil</option>
+                <option value="terror">Terror</option>
+                <option value="familia">Familia</option>
+                <option value="serie">Serie</option>
+                <option value="anime">Anime</option>
+            </select>
+            <!--<input type="text" class="form-control" formControlName="genero" placeholder="sinopsis">-->
+        </div>
+        <div class="mb-3">
+            <label for="img" class="form-label">Url img</label>
+            <input type="text" class="form-control" formControlName="img" placeholder="url">
+        </div>
+        <div class="mb-3">
+            <label for="anio" class="form-label">Año</label>
+            <input type="number" class="form-control" formControlName="anio" placeholder="2023">
+        </div>
+        <div class="form-check form-switch">
+            <label class="form-check-label" for="estreno">Estreno?</label>
+            <input class="form-check-input" type="checkbox" role="switch" formControlName="estreno" checked>
+        </div>
+
+        <div class="row justify-content-start">
+
+            <div class="col-8">
+
+
+            </div>
+
+            <div class="col">
+                <input type="reset" value="Cancelar envio" class="btn btn-primary"> &nbsp;
+                <input type="submit" value="Enviar Formulario" class="btn btn-success" id="liveToastBtn">
+            </div>
+        </div>
+
+
+    </form>
+  
+    
+</div>

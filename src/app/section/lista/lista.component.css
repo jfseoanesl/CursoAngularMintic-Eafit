@@ -1,0 +1,17 @@
+.centrar-div {
+    width: 60%;
+    margin: 2% auto; /* Esto centra horizontalmente la div */
+    padding: 20px; /* AÃ±ade espacio interior para que se vea mejor */
+    background-color: #f0f0f0; /* Cambia el color de fondo si lo deseas */
+}
+
+td.something {
+    width: 60%;
+  }
+
+  .centrar-h3{
+    width: 60%;
+    margin: 2% auto; /* Esto centra horizontalmente la div */
+    padding: 20px; /* AÃ±ade espacio interior para que se vea mejor */
+    
+  }
