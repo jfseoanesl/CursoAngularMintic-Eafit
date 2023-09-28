@@ -25,3 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# CursoAngularMintic-Eafit
+Aplicación de muestra en angular con servicios de autenticación y acceso a datos con firebase.
+
+# Instrucciones
+1- Debes tener node.js y angular previamente instalado
+
+2 - Clonar repositorio
+
+3 - instalar los modulos con "npm install"
+
+4 - Vincular app con firebase
+
+     a) Vincular cuenta de firebase "firebase login"
+     b) "ng add @angular/fire"  para crear enviroment
+     c) activar servicio de autenticacion en consola de firebase
+     d) "ng deploy" desplegar
